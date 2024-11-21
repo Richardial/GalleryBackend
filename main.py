@@ -2,7 +2,7 @@ from flask import Flask,jsonify, request
 from flask_cors import CORS, cross_origin
 import psycopg2
 
-url = "postgresql://postgres:12345@localhost:5432/Fotosdelmundo"
+url = "postgresql://fotosdelmundo_user:S4dex9mXbosCUXY6ApTUifP75KwhwuYq@dpg-csvrl6i3esus73831na0-a.oregon-postgres.render.com/fotosdelmundo"
 # url = "postgresql://postgres:1234@localhost:5432/fotosdelmundo"
 
 app = Flask(__name__)
