@@ -10,6 +10,7 @@ cors = CORS(app,supports_credentials=True)
 CORS(app, resources={
     r"/login/*": {"origins": ["http://localhost:5173", "https://fotosdelmundo.netlify.app"]},
     r"/register/*": {"origins": ["http://localhost:5173", "https://fotosdelmundo.netlify.app"]},
+    r"/credentials/*": {"origins": ["http://localhost:5173", "https://fotosdelmundo.netlify.app"]},
 }, supports_credentials=True)
 
 app.config['CORS_HEADERS'] = 'Content-Type'
