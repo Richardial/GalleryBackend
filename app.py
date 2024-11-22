@@ -7,6 +7,11 @@ url = "postgresql://fotosdelmundo_user:S4dex9mXbosCUXY6ApTUifP75KwhwuYq@dpg-csvr
 
 app = Flask(__name__)
 cors = CORS(app,supports_credentials=True)
+CORS(app, resources={
+    r"/login/*": {"origins": ["http://localhost:5173", "https://fotosdelmundo.netlify.app"]},
+    r"/register/*": {"origins": ["http://localhost:5173", "https://fotosdelmundo.netlify.app"]},
+}, supports_credentials=True)
+
 app.config['CORS_HEADERS'] = 'Content-Type'
 connection = psycopg2.connect(url)
 
